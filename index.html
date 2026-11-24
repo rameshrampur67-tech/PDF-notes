@@ -212,7 +212,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dis
 const $ = s => document.querySelector(s);
 const PROVIDERS = {
   gemini:   { model:'gemini-3.8-flash',  keyUrl:'https://aistudio.google.com/app/apikey' },
-  openai:   { model:'openrouter/free',            keyUrl:'https://openrouter.ai' },
+  openrouter:   { model:'openrouter/free',            keyUrl:'https://openrouter.ai/keys' },
   anthropic:{ model:'claude-sonnet-4-5', keyUrl:'https://console.anthropic.com/settings/keys' }
 };
 const DEFAULTS = { provider:'gemini', keys:{gemini:'',openai:'',anthropic:''}, models:{gemini:'',openai:'',anthropic:''}, mode:'english', sendImage:true, prefetch:true };

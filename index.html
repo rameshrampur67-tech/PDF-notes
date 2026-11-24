@@ -215,7 +215,7 @@ const PROVIDERS = {
   openrouter:   { model:'openrouter/free',            keyUrl:'https://openrouter.ai/keys' },
   anthropic:{ model:'claude-sonnet-4-5', keyUrl:'https://console.anthropic.com/settings/keys' }
 };
-const DEFAULTS = { provider:'gemini', keys:{gemini:'',openai:'',anthropic:''}, models:{gemini:'',openai:'',anthropic:''}, mode:'english', sendImage:true, prefetch:true };
+const DEFAULTS = { provider:'gemini', keys:{gemini:'', openrouter:'',anthropic:''}, models:{gemini:'',openrouter:'',anthropic:''}, mode:'english', sendImage:true, prefetch:true };
 function loadSettings(){
   try{ const s = JSON.parse(localStorage.getItem('tl_settings')||'{}');
     return {...DEFAULTS, ...s, keys:{...DEFAULTS.keys, ...(s.keys||{})}, models:{...DEFAULTS.models, ...(s.models||{})}};
